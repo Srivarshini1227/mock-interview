@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Mock Interview</title>
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body oncopy="showValidation()" oncontextmenu="return false;">
+
+    <div class="card">
+        <!-- SLIDE 1: Welcome Slide -->
+        <div id="slide1" class="slide active">
+            <h1 class="main-title">MOCK INTERVIEW</h1>
+            <p class="sub-title">make you confidence</p>
+            <button class="btn" onclick="nextSlide(2)">Next</button>
+        </div>
+
+        <!-- SLIDE 2: Topic & Level Selection -->
+        <div id="slide2" class="slide">
+            <div class="section-title">Topics</div>
+            <div class="options-grid" id="topics-container">
+                <button class="option-btn" onclick="selectTopic(this, 'EC2')">EC2</button>
+                <button class="option-btn" onclick="selectTopic(this, 'S3')">S3</button>
+                <button class="option-btn" onclick="selectTopic(this, 'IAM')">IAM</button>
+                <button class="option-btn" onclick="selectTopic(this, 'Lambda')">Lambda</button>
+                <button class="option-btn" onclick="selectTopic(this, 'EFS')">EFS</button>
+                <button class="option-btn" onclick="selectTopic(this, 'VPC')">VPC</button>
+                <button class="option-btn" onclick="selectTopic(this, 'Elastic Beanstalk')">Elastic Beanstalk</button>
+                <button class="option-btn" onclick="selectTopic(this, 'DynamoDB')">DynamoDB</button>
+            </div>
+
+            <div class="section-title">Types</div>
+            <div class="options-grid">
+                <button class="option-btn" onclick="selectLevel(this, 'Easy')">Easy</button>
+                <button class="option-btn" onclick="selectLevel(this, 'Medium')">Medium</button>
+                <button class="option-btn" onclick="selectLevel(this, 'Hard')">Hard</button>
+            </div>
+
+            <button class="btn" onclick="startInterview()">Next</button>
+        </div>
+
+        <!-- SLIDE 3: Interview Questions -->
+        <div id="slide3" class="slide">
+            <div class="q-count">Question <span id="q-num">1</span> of 10</div>
+            <h3 id="question-text" style="color: #222;">Question text here...</h3>
+            <textarea id="user-answer" placeholder="Type your answer here..."></textarea>
+            <br>
+            <button class="btn" onclick="submitAnswer()">Next Question</button>
+        </div>
+
+        <!-- SLIDE 4: Results -->
+        <div id="slide4" class="slide">
+            <h2 class="main-title">Interview Completed!</h2>
+            <p>Your Performance Result:</p>
+            <div id="result-text" class="result-badge">SUPER</div>
+            <button class="btn" onclick="location.reload()">Restart Interview</button>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="footer-note">All the best for mock interviews</div>
+    </div>
+
+    <!-- Linking JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
